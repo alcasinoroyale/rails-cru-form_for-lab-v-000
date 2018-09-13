@@ -5,6 +5,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    @artist = Artist.new(params.require(:artist).permit(:name))
   end
 
   def show
